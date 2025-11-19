@@ -8,9 +8,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portfolio.css">
+  <link href="portfolio.css" rel="stylesheet" >
 </head>
-<body>
+<body>                           
 
   <!-- Utilisons le composant Navbar de Bootstrap : responsive, collapse sur mobile -->
   <!-- NAVBAR -->
@@ -18,7 +18,7 @@
   <div class="container">
     <!-- Logo cliquable -->
     <a class="navbar-brand d-flex align-items-center" href="#top" data-bs-toggle="modal" data-bs-target="#logoModal">
-      <img src="images/logo.jpg" alt="Logo" class="logo-img me-2" width="36" height="36">
+      <img src="images/logo.jpg" alt="Logo" class="logo-img me-2 invert-on-dark" width="36" height="36">
       <span class="fw-bold">PN</span>
     </a>
 
@@ -34,6 +34,11 @@
         <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
         <li class="nav-item"><a class="nav-link" href="#realisations">Réalisations</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item d-flex align-items-center ms-2">
+          <button id="themeToggle" class="btn btn-sm btn-outline-secondary" aria-label="Basculer thème">
+            <span id="themeIcon">🌙</span>
+          </button>
+        </li>
       </ul>
     </div>
   </div>
@@ -44,7 +49,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content border-0 bg-transparent">
       <div class="modal-body p-0">
-        <img src="images/logo.jpg" class="img-fluid" alt="Logo agrandi">
+        <img src="images/logo.jpg" class="img-fluid invert-on-dark" alt="Logo agrandi">
       </div>
     </div>
   </div>
@@ -54,12 +59,13 @@
   <!-- SECTION ACCUEIL : Présentation personnelle --> 
   <header id="accueil" class="hero">
     <div class="container">
+      <div class="card shadow-lg border-0 rounded-4 p-4">
       <div class="row align-items-center g-4">
         <div class="col-lg-6 text-center text-lg-start">
           <!-- Card type Hero -->
           <div class="card border-0">
             <div class="card-body">
-              <h1 class="display-6 fw-bold">Salut — je me nomme <span class="text-primary">Paola Stéphanie Ngameni</span></h1>
+              <h1 class="display-6 fw-bold">Salut — Moi c'est <span class="text-primary">Paola Stéphanie Ngameni</span></h1>
               <p class="lead text-muted">Étudiante en informatique appliquée, je me spécialise progressivement en IA et en vision par ordinateur. 
                Je suis curieuse, motivée et j'aime comprendre le "pourquoi" derriere chaque concept. Mon objectif est de continuer a developper mes compétences en IA tout en construisant progressivement mes propes projets.</p>
 
@@ -78,25 +84,27 @@
 
         <div class="col-lg-6 text-center">
           <!-- Photo de profil et mini bio -->
-          <img src="images/photo-profil.jpg" alt="Photo de profil" class="img-fluid profile-photo mb-3">
+          <img src="images/photo-profil.jpg " alt="Photo de profil" class="img-fluid profile-photo mb-3">
           <h2 class="h5 fw-bold mb-1">Paola Stéphanie Ngameni</h2>
           <p class="text-muted mb-0">Étudiante en informatique | Passionnée par de nouvelles innovations technologiques</p>
   
         </div>
       </div>
+     </div> 
     </div>
   </header>
 
   <!-- SECTION PROJETS -->
 <section id="projets" class="py-5">
   <div class="container">
+    <div class="card shadow-lg border-0 rounded-4 p-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2 class="h3 mb-0">Projets</h2>
       <small class="text-muted">1 à 3 projets présentés</small>
     </div>
 
     <!-- Projet 1 : Détection de bateaux (YOLO) -->
-    <div class="card mb-4 shadow-sm">
+    <div class="project-card mb-4">
       <div class="row g-0 align-items-center">
         <div class="col-md-5">
           <div id="carouselProjet1" class="carousel slide" data-bs-ride="carousel" aria-label="Galerie détection bateaux">
@@ -113,7 +121,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="images/results.png" class="img-fluid d-block w-100" alt="Résultat détection bateaux 2">
+                <img src="images/results.png" class="img-fluid  d-block w-100" alt="Résultat détection bateaux 2">
                 <div class="carousel-caption d-none d-md-block">
                   
                 </div>
@@ -158,7 +166,7 @@
     </div>
 
     <!-- Projet 2 : Régression logistique (transformé en carousel) -->
-    <div class="card mb-4 shadow-sm">
+    <div class="project-card mb-4">
       <div class="row g-0 align-items-center">
         <div class="col-md-5">
           <div id="carouselProjet2" class="carousel slide" data-bs-ride="carousel" aria-label="Galerie régression logistique">
@@ -209,7 +217,7 @@
     </div>
 
     <!-- Projet 3 : Détection de visages (OpenCV) -->
-    <div class="card mb-4 shadow-sm">
+    <div class="project-card mb-4 ">
       <div class="row g-0 align-items-center">
         <div class="col-md-5">
           <div id="carouselProjet3" class="carousel slide" data-bs-ride="carousel" aria-label="Galerie détection visages">
@@ -268,7 +276,7 @@
         </div>
       </div>
     </div>
-
+   </div>
   </div>
 </section>
 <!-- ===== FIN SECTION PROJETS ===== -->
@@ -276,7 +284,7 @@
   <!-- SECTION COMPETENCES -->
   <section id="competences" class="py-5 bg-light">
   <div class="container">
-
+   <div class="card shadow-lg border-0 rounded-4 p-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2 class="h3 mb-0">Compétences</h2>
       <small class="text-muted">Langages, outils & design</small>
@@ -331,7 +339,7 @@
           Outils utilisés pour le développement web et la conception d'interfaces.
         </p>
       </div>
-
+     </div>
     </div>
   </div>
 </section>
@@ -339,7 +347,7 @@
   <!-- SECTION RÉALISATIONS & CERTIFICATIONS -->
 <section id="realisations" class="py-5 bg-light">
   <div class="container">
-
+    <div class="card shadow-lg border-0 rounded-4 p-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2 class="h3 mb-0">Réalisations & Certifications</h2>
       <small class="text-muted">Distinctions, engagements & auto-formation</small>
@@ -386,23 +394,24 @@
       <span class="badge bg-secondary me-1">C++</span>
       <span class="badge bg-success me-1">Machine Learning</span>
     </div>
-
+  </div>
   </div>
 </section>
 
   <!-- SECTION CONTACT -->
-  <section id="contact" class="py-5 bg-light">
+  <section id="contact" class="py-5">
     <div class="container">
+     <div class="card shadow-lg border-0 rounded-4 p-4"> 
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
-          <h2 class="h4">Contact</h2>
+          <h2 class="h4">Mes Coordonnées</h2>
           <p class="text-muted">Vous pouvez me joindre par email ou via mes profils professionnels.</p>
 
           <!-- Informations de contact -->
           <ul class="list-unstyled">
             <li class="mb-2"><strong>Email:</strong> <a href="mailto:paolangameni22@gmail.com">paolangameni22@gmail.com</a></li>
             <li class="mb-2"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/paola-ngameni-084255286/" target="_blank">https://www.linkedin.com/in/paola-ngameni-084255286/</a></li>
-            <li class="mb-2"><strong>Indeed:</strong> <a href="https://profile.indeed.com/?hl=fr_CA&co=CA&from=gnav-app-tracker" target="_blank">https://profile.indeed.com/?hl=fr_CA&co=CA&from=gnav-app-tracker</a></li>
+            <li class="mb-2"><strong>Indeed:</strong> <a href="https://profile.indeed.com/?hl=fr_CA&co=CA&from=gnav-app-tracker" target="_blank">contactez-moi</a></li>
             <li class="mb-2"><strong>Twitter:</strong> <a href="https://x.com/ngameni99429" target="_blank">cliquer</a></li>
             
           </ul> 
@@ -415,6 +424,8 @@
 
         <div class="col-lg-6">
           <!-- Formulaire de contact (Bootstrap form controls) -->
+         <div class="container">
+          <div class="card shadow-lg border-0 rounded-4 p-4">   
           <form id="contactForm" class="needs-validation" novalidate>
             <div class="mb-3">
               <label for="name" class="form-label">Nom</label>
@@ -437,8 +448,11 @@
             <button type="submit" class="btn btn-primary">Envoyer</button>
             <div id="formAlert" class="mt-3" style="display:none;"></div>
           </form>
+         </div> 
+        </div>
         </div>
       </div>
+     </div> 
     </div>
   </section>
 
