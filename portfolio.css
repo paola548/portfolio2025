@@ -1,0 +1,119 @@
+/* styles.css */
+
+/* Défilement fluide global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Thème de couleurs (personnalisation rapide) */
+:root {
+  --brand-primary: #0d6efd;   /* Bootstrap Primary */
+  --brand-secondary: #6c757d; /* Bootstrap Secondary */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  padding-top: 60px; /* Espace pour la navbar fixe */
+}
+
+/* Navbar collée au top: ajoute un offset visuel */
+header, main section {
+  scroll-margin-top: 90px; /* évite que le titre soit caché par la navbar */
+}
+#accueil, #projets, #competences, #realisations, #contact {
+  scroll-margin-top: 100px;
+}
+
+/* Hero image */
+#accueil img {
+  object-fit: cover;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  scroll-margin-top: 90px; 
+}
+
+.profile-photo {
+  max-width: 200px;       /* Limite la taille sur grand écran */
+  width: 100%;            /* S’adapte à la largeur disponible */
+  height: auto;           /* Garde les proportions */
+  border-radius: 50%;     /* Rend l’image circulaire */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Ombre douce */
+  object-fit: cover;      /* Coupe proprement si image carrée */
+}
+
+.logo-img {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+}
+/* Cards uniformes */
+.card-img-top {
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/* Carousel: arrondis et limites */
+#portfolioCarousel img {
+  max-height: 480px;
+  object-fit: cover;
+}
+
+/* Footer texte */
+footer {
+  background-color: #f8f9fa;
+  color: #555;
+  padding: 20px 0;
+}
+footer p {
+  margin: 0;
+  font-weight: 500;
+}
+footer small {
+  color: #888;
+}
+
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: auto;
+}
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--brand-primary);
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.progress {
+  height: 20px;
+  border-radius: 10px;
+  background-color: #e9ecef;
+}
+.progress-bar {
+  font-weight: 500;
+  background: linear-gradient(90deg, var(--brand-primary), #4dabf7);
+}
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 120px;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .profile-photo {
+    max-width: 150px;
+  }
+}
