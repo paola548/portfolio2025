@@ -75,6 +75,16 @@ header, main section {
 /* ---------------------------
    6) Sections / boîtes
    --------------------------- */
+/* ==== Boîtes claires pour toutes les sections ==== */
+.section-box {
+  background-color: #ffffff;   /* fond blanc */
+  color: #212529;              /* texte sombre */
+  border: 1px solid #dee2e6;  /* bordure gris clair */
+  border-radius: 1rem;         /* coins arrondis */
+  padding: 1.5rem;             /* espace intérieur */
+  margin-bottom: 2rem;         /* espace entre les boîtes */
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.05); /* légère ombre */
+}
 
 .project-card {
   background: var(--card-bg);
@@ -216,6 +226,11 @@ footer small {
     margin-bottom: 20px;
     border-radius: 10px;
   }
+
+  .section-box {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
 }
 
 /* ---------------------------
